@@ -1,0 +1,14 @@
+lw 0 1 n //load reg1 with 5 (uses symbolic address)
+lw 0 2 11 //load reg2 with -1 (uses numeric address)
+lw 0 3 10 //
+lw 0 4 12 //
+start add 4 1 4 //decrement reg1
+add 3 2 3 //
+beq 0 3 2 //goto end of program when reg1==0
+beq 0 0 start //go back to the beginning of the loop
+noop 
+done halt //end of program
+n .fill 8 //
+neg1 .fill -1 //
+zero .fill 0 //
+stAddr .fill start  //will contain the address of start 
